@@ -1,5 +1,11 @@
 let generation = 0
+
 let grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+
+let playing = false
+
+let playBtn = document.getElementById('playBtn')
+playBtn.innerHTML = 'PLAY'
 const toggleCell = (x, y) => {
     if(grid[x][y] === 1) {
         grid[x][y] = 0
@@ -106,8 +112,21 @@ function nextGen() {
 
     setGrid()
 }
+let playInterval = null
+const play = () => {
+    playing = !playing
+    if(playing) {
+        playBtn.innerHTML = 'PAUSE'
+    } else{
+        playBtn.innerHTML = 'PLAY'
+    }
+    if(playing === true) {
+        playInterval = setInterval(() => nextGen(), 1000)
+    } else {
+        clearInterval(playInterval)
+    }
 
-const play = setInterval(nextGen(), 1000)
+}
 
 
 setGrid()
