@@ -1,5 +1,6 @@
 let generation = 0
-
+let generationTxt = document.getElementsByClassName('generation')
+generationTxt[0].innerHTML = generation
 let grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
 
 let playing = false
@@ -34,6 +35,8 @@ function setGrid() {
 }
 
 function nextGen() {
+    generation += 1
+    generationTxt[0].innerHTML = generation
     for(let i = 0; i < grid.length; i++) {
         for(let j = 0; j < grid[i].length; j++){
             let liveNeighbors = 0
@@ -113,7 +116,8 @@ function nextGen() {
     setGrid()
 }
 let playInterval = null
-const play = () => {
+function play() {
+    
     playing = !playing
     if(playing) {
         playBtn.innerHTML = 'PAUSE'
@@ -127,6 +131,15 @@ const play = () => {
     }
 
 }
+
+function clearGrid() {
+    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    setGrid()
+    generation = 0
+    generationTxt[0].innerHTML = generation
+}
+
+
 
 
 setGrid()
