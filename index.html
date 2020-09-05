@@ -2,20 +2,27 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Conways Game of Life</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conways Game of Life</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>Conway's Game of Life</header>
+    <header>Conway's Game of Life</header>
+    <p class='generation'></p>
+
+  
         <section class="rules">
             <h2>Rules:</h2>
             <ul>
@@ -24,16 +31,22 @@
                 <li>Live cells with less than 2 live neighbors will die to starvation</li>
             </ul>
         </section>
-        <p class='generation'></p>
+        <button onclick="play()" id="playBtn"></button>
+        <button onclick="clearGrid()">CLEAR</button>
         <section id="grid">
 
         </section>
-        <section class="presets">
+       
 
-        </section>
-        <button onclick="play()" id="playBtn"></button>
-        <button onclick="clearGrid()">CLEAR</button>
-        
-        <script src="gol.js" async defer></script>
-    </body>
+    <div class='buttons'>
+        <button> Glider</button>
+        <button> Pulsar</button>
+        <button>Spaceship</button>
+        <button>Random</button>
+      
+    </div>
+
+    <script src="gol.js" async defer></script>
+</body>
+
 </html>
