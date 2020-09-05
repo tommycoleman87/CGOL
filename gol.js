@@ -1,3 +1,5 @@
+
+
 let generation = 0
 let generationTxt = document.getElementsByClassName('generation')
 generationTxt[0].innerHTML = `Generation: ${generation}`
@@ -139,6 +141,21 @@ function clearGrid() {
     generationTxt[0].innerHTML = `Generation: ${generation}`
 }
 
+function glider() {
+    let gliderGrid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    gliderGrid[0][0] = 1
+    gliderGrid[1][1] = 1
+    gliderGrid[1][2] = 1
+    gliderGrid[2][0] = 1
+    gliderGrid[2][1] = 1
+    return gliderGrid
+
+}
+
+function setGlider() {
+    grid = glider()
+    setGrid()
+}
 
 
 
