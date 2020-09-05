@@ -73,6 +73,10 @@ table {
     
 }
 
+.cell:hover {
+    cursor: pointer;
+}
+
 .dead {
     background-color: black;
 }
@@ -91,5 +95,12 @@ button {
     color: black;
     font-family: 'VT323', monospace;
     font-weight: bold;
+    font-size: 1.2rem;
     width: 100px;
+}
+h2 {
+    font-size: 1.5rem;
+}
+li {
+    font-size: 1.3rem;
 }
