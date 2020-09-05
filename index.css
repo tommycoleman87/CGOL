@@ -55,6 +55,10 @@ table {
 	border-spacing: 0;
 }
 
+.body-container {
+    display: flex;
+}
+
 /* grid */
 #grid {
     background-color: black;
@@ -88,6 +92,13 @@ table {
 header {
     font-size: 2rem;
 }
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 500px;
+}
 
 button {
     border-radius: 0;
@@ -97,6 +108,7 @@ button {
     font-weight: bold;
     font-size: 1.2rem;
     width: 100px;
+    margin: 5px;
 }
 h2 {
     font-size: 1.5rem;
