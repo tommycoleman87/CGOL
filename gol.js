@@ -161,6 +161,20 @@ function glider() {
 
 }
 
+function random() {
+    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    for(let i = 0; i < grid.length; i++) {
+        for(let j = 0; j < grid[i].length; j++) {
+            let chance = Math.floor(Math.random() * 10)
+            if(chance < 3) {
+                grid[i][j] = 1
+            }
+        }
+    }
+
+    setGrid()
+}
+
 
 
 
