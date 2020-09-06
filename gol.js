@@ -1,3 +1,5 @@
+
+
 let generation = 0
 let generationTxt = document.getElementsByClassName('generation')
 generationTxt[0].innerHTML = `Generation: ${generation}`
@@ -7,14 +9,7 @@ let playing = false
 
 let playBtn = document.getElementById('playBtn')
 playBtn.innerHTML = 'PLAY'
-const toggleCell = (x, y) => {
-    if(grid[x][y] === 1) {
-        grid[x][y] = 0
-    } else {
-        grid[x][y] = 1
-    }
-    setGrid()
-}
+
 function setGrid() {
     let section = document.getElementById('grid')
     section.innerHTML = ''
@@ -32,6 +27,18 @@ function setGrid() {
             section.appendChild(cell)
         }
     }
+}
+
+const toggleCell = (x, y) => {
+    if(playing === false) {
+        if(grid[x][y] === 1) {
+            grid[x][y] = 0
+        } else {
+            grid[x][y] = 1
+        }
+        setGrid()
+    }
+ 
 }
 
 function nextGen() {
@@ -133,10 +140,39 @@ function play() {
 }
 
 function clearGrid() {
-    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    if(playing === false) {
+        grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+        setGrid()
+        generation = 0
+        generationTxt[0].innerHTML = `Generation: ${generation}`
+    }
+
+}
+
+function glider() {
+    let gliderGrid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    gliderGrid[0][0] = 1
+    gliderGrid[1][1] = 1
+    gliderGrid[1][2] = 1
+    gliderGrid[2][0] = 1
+    gliderGrid[2][1] = 1
+    grid = gliderGrid
     setGrid()
-    generation = 0
-    generationTxt[0].innerHTML = `Generation: ${generation}`
+
+}
+
+function random() {
+    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+    for(let i = 0; i < grid.length; i++) {
+        for(let j = 0; j < grid[i].length; j++) {
+            let chance = Math.floor(Math.random() * 10)
+            if(chance < 3) {
+                grid[i][j] = 1
+            }
+        }
+    }
+
+    setGrid()
 }
 
 
