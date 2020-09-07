@@ -44,6 +44,7 @@ const toggleCell = (x, y) => {
 function nextGen() {
     generation += 1
     generationTxt[0].innerHTML = `Generation: ${generation}`
+    let liveCells = false
     for(let i = 0; i < grid.length; i++) {
         for(let j = 0; j < grid[i].length; j++){
             let liveNeighbors = 0
@@ -114,13 +115,24 @@ function nextGen() {
         for(let j = 0; j < grid[i].length; j++) {
             if(grid[i][j] === -1) {
                 grid[i][j] = 1
+                liveCells = true
             } else if(grid[i][j] === 2) {
                 grid[i][j] = 0
+            } else if(grid[i][j] === 1) {
+                liveCells = true
             }
         }
     }
 
-    setGrid()
+    if(liveCells === true) {
+        setGrid()
+    } else {
+        playing = false
+        playBtn.innerHTML = "PLAY"
+        clearInterval(playInterval)
+        clearGrid()
+    }
+    
 }
 let playInterval = null
 function play() {
