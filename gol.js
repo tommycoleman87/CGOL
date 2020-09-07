@@ -175,6 +175,75 @@ function random() {
     setGrid()
 }
 
+function pulsar() {
+    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+
+    grid[5][9] = 1
+    grid[5][10] = 1
+    grid[5][11] = 1
+
+    grid[5][15] = 1
+    grid[5][16] = 1
+    grid[5][17] = 1
+
+    grid[7][7] = 1
+    grid[7][12] = 1
+    grid[7][14] = 1
+    grid[7][19] = 1
+
+    grid[8][7] = 1
+    grid[8][12] = 1
+    grid[8][14] = 1
+    grid[8][19] = 1
+
+    grid[9][7] = 1
+    grid[9][12] = 1
+    grid[9][14] = 1
+    grid[9][19] = 1
+
+    grid[10][9] = 1
+    grid[10][10] = 1
+    grid[10][11] = 1
+
+    grid[10][15] = 1
+    grid[10][16] = 1
+    grid[10][17] = 1
+
+    grid[12][9] = 1
+    grid[12][10] = 1
+    grid[12][11] = 1
+
+    grid[12][15] = 1
+    grid[12][16] = 1
+    grid[12][17] = 1
+
+    
+    grid[13][7] = 1
+    grid[13][12] = 1
+    grid[13][14] = 1
+    grid[13][19] = 1
+
+    grid[14][7] = 1
+    grid[14][12] = 1
+    grid[14][14] = 1
+    grid[14][19] = 1
+
+    grid[15][7] = 1
+    grid[15][12] = 1
+    grid[15][14] = 1
+    grid[15][19] = 1
+
+    grid[17][9] = 1
+    grid[17][10] = 1
+    grid[17][11] = 1
+
+    grid[17][15] = 1
+    grid[17][16] = 1
+    grid[17][17] = 1
+
+    setGrid()
+}
+
 
 
 
