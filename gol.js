@@ -244,6 +244,29 @@ function pulsar() {
     setGrid()
 }
 
+function spaceShip() {
+    grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
+
+     
+    grid[10][2] = 1
+    grid[10][3] = 1
+
+    grid[11][0] = 1
+    grid[11][1] = 1
+    grid[11][3] = 1
+    grid[11][4] = 1
+
+    grid[12][0] = 1
+    grid[12][1] = 1
+    grid[12][2] = 1
+    grid[12][3] = 1
+
+    grid[13][1] = 1
+    grid[13][2] = 1
+    
+    setGrid()
+}
+
 
 
 
