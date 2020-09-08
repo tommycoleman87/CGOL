@@ -98,6 +98,10 @@ header {
     justify-content: center;
     margin-top: 20px;
     max-width: 500px;
+    text-align: center;
+}
+.buttons h2 {
+    width: 100%;
 }
 
 button {
