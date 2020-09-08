@@ -152,12 +152,14 @@ function play() {
 }
 
 function clearGrid() {
-    if(playing === false) {
+        playing = false
         grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
         setGrid()
+        clearInterval(playInterval)
+        playBtn.innerHTML = "PLAY"
         generation = 0
         generationTxt[0].innerHTML = `Generation: ${generation}`
-    }
+
 
 }
 
