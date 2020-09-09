@@ -35,9 +35,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+
     font-family: 'VT323', monospace;
-    color: green;
+
 }
 ol, ul {
 	list-style: none;
@@ -123,4 +123,11 @@ h2 {
 }
 li {
     font-size: 1.3rem;
+}
+.mainContainer {
+    display: flex;
+
+}
+.rules {
+    background-color: silver;
 }
