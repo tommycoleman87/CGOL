@@ -129,5 +129,10 @@ li {
 
 }
 .rules {
+    padding: 10px;
+    margin: 10px;
     background-color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
