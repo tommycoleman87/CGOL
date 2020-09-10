@@ -35,9 +35,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+
     font-family: 'VT323', monospace;
-    color: green;
+
 }
 ol, ul {
 	list-style: none;
@@ -98,6 +98,10 @@ header {
     justify-content: center;
     margin-top: 20px;
     max-width: 500px;
+    text-align: center;
+}
+.buttons h2 {
+    width: 100%;
 }
 
 button {
@@ -110,9 +114,25 @@ button {
     width: 100px;
     margin: 5px;
 }
+
+button:hover {
+    cursor: pointer;
+}
 h2 {
     font-size: 1.5rem;
 }
 li {
     font-size: 1.3rem;
+}
+.mainContainer {
+    display: flex;
+
+}
+.rules {
+    padding: 10px;
+    margin: 10px;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
