@@ -136,3 +136,10 @@ li {
     flex-direction: column;
     justify-content: space-around;
 }
+
+.playBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
