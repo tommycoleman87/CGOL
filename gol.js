@@ -2,12 +2,12 @@
 
 let generation = 0
 let generationTxt = document.getElementsByClassName('generation')
-generationTxt[0].innerHTML = `Generation: ${generation}`
 let grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
-
 let playing = false
-
 let playBtn = document.getElementById('playBtn')
+let speed = 1500
+generationTxt[0].innerHTML = `Generation: ${generation}`
+
 playBtn.innerHTML = 'PLAY'
 
 function setGrid() {
@@ -144,7 +144,7 @@ function play() {
         playBtn.innerHTML = 'PLAY'
     }
     if (playing === true) {
-        playInterval = setInterval(() => nextGen(), 1000)
+        playInterval = setInterval(() => nextGen(), speed)
     } else {
         clearInterval(playInterval)
     }
@@ -281,20 +281,19 @@ function spaceShip() {
     setGrid()
 }
 
+function increaseSpeed() {
+    if(speed > 500) {
+        speed -= 100
+    }
+}
+
+function decreaseSpeed() {
+    if(speed < 5000) {
+        speed += 100
+    }
+}
 
 
 
 setGrid()
 
-function lotsOfArt(arr) {
-    let newArr = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].paintings > 100) {
-            newArr.push(arr[i])
-            //  console.log(newArr)
-        } else {
-            console.log("none")
-        }
-    } 
-    return newArr
-}
