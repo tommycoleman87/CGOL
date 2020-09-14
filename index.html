@@ -36,6 +36,7 @@
                 <h2>How to Play:</h2>
                 <p>Select a preset or individual cells and hit play. A pattern works best. </p>
                 <p>The clear button will stop and clear the board and generation counter</p>
+                <p>You can use the FASTER and SLOWER buttons to control the speed</p>
             </div>
 
             <div>
@@ -49,14 +50,16 @@
             <section id="grid">
 
             </section>
-            <button onclick="play()" id="playBtn"></button>
-            <button>&lt; &lt;
+            <div class="playBar">
+                <button onclick="play()" id="playBtn"></button>
+            <button onclick="decreaseSpeed()">
+                SLOWER
             </button>
-            <p>SPEED</p>
-            <button>
-                &gt; &gt;
+            <button onclick="increaseSpeed()">
+                FASTER
             </button>
             <button onclick="clearGrid()">CLEAR</button>
+            </div>
 
             <div class='buttons'>
                 <h2>Presets:</h2>
