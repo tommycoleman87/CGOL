@@ -286,12 +286,20 @@ function spaceShip() {
 function increaseSpeed() {
     if(speed > 500) {
         speed -= 100
+        if(playing === true) {
+            clearInterval(playInterval)
+            playing = false
+            play()
+        }
     }
 }
 
 function decreaseSpeed() {
     if(speed < 5000) {
         speed += 100
+        clearInterval(playingInterval)
+        playing = !playing
+        play()
     }
 }
 
