@@ -6,8 +6,6 @@ let grid = new Array(25).fill([]).map(row => new Array(25).fill(0))
 let playing = false
 let playBtn = document.getElementById('playBtn')
 let speed = 1500
-let speedTxt = document.getElementById('speed')
-speedTxt.innerHTML += ' 1x'
 generationTxt[0].innerHTML = `Generation: ${generation}`
 
 playBtn.innerHTML = 'PLAY'
@@ -284,7 +282,7 @@ function spaceShip() {
 }
 
 function increaseSpeed() {
-    if(speed > 500) {
+    if(speed > 100) {
         speed -= 100
         if(playing === true) {
             clearInterval(playInterval)
@@ -297,9 +295,11 @@ function increaseSpeed() {
 function decreaseSpeed() {
     if(speed < 5000) {
         speed += 100
-        clearInterval(playingInterval)
-        playing = !playing
-        play()
+        if(playing === true) {
+            clearInterval(playInterval)
+            playing = false
+            play()
+        }
     }
 }
 
