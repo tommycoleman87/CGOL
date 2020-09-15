@@ -283,7 +283,7 @@ function spaceShip() {
 
 function increaseSpeed() {
     if(speed > 100) {
-        speed -= 100
+        speed -= 200
         if(playing === true) {
             clearInterval(playInterval)
             playing = false
@@ -294,7 +294,7 @@ function increaseSpeed() {
 
 function decreaseSpeed() {
     if(speed < 5000) {
-        speed += 100
+        speed += 200
         if(playing === true) {
             clearInterval(playInterval)
             playing = false

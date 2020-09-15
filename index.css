@@ -135,11 +135,26 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
+}
+
+.rules a {
+    text-decoration: none;
 }
 
 .playBar {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.playBar p {
+    width: 100%;
+}
+
+.board {
+    text-align: center;
+    font-size: 1.5rem;
 }
