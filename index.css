@@ -69,6 +69,8 @@ table {
     height: 500px;
 }
 
+
+
 .cell {
     width: 20px;
     height: 20px;
@@ -157,4 +159,18 @@ li {
 .board {
     text-align: center;
     font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 500px) {
+    #grid {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cell {
+        width: 10px;
+        height: 10px;
+    }
 }
