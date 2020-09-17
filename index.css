@@ -173,4 +173,9 @@ li {
         width: 10px;
         height: 10px;
     }
+
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
