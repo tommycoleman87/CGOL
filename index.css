@@ -66,8 +66,10 @@ table {
     flex-direction: row;
     flex-wrap: wrap;
     width: 500px;
-    height: 500px;
+    /* height: 500px; */
 }
+
+
 
 .cell {
     width: 20px;
@@ -92,6 +94,7 @@ table {
 header {
     font-size: 2rem;
 }
+
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -135,11 +138,45 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
+}
+
+.rules a {
+    text-decoration: none;
 }
 
 .playBar {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.playBar p {
+    width: 100%;
+}
+
+.board {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 500px) {
+    #grid {
+        width: 250px;
+        /* height: 250px; */
+    }
+
+    .cell {
+        width: 10px;
+        height: 10px;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
