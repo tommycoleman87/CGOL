@@ -10,6 +10,9 @@ generationTxt[0].innerHTML = `Generation: ${generation}`
 
 playBtn.innerHTML = 'PLAY'
 
+gridHeight = document.getElementById('grid').offsetWidth
+setGridHeight = document.getElementById('grid').style.height = `${gridHeight}px`
+
 function setGrid() {
     let section = document.getElementById('grid')
     section.innerHTML = ''

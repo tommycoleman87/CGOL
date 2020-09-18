@@ -66,7 +66,7 @@ table {
     flex-direction: row;
     flex-wrap: wrap;
     width: 500px;
-    height: 500px;
+    /* height: 500px; */
 }
 
 
@@ -94,6 +94,7 @@ table {
 header {
     font-size: 2rem;
 }
+
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -166,7 +167,7 @@ li {
 @media (max-width: 500px) {
     #grid {
         width: 250px;
-        height: 250px;
+        /* height: 250px; */
     }
 
     .cell {
