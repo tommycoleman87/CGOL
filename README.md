@@ -6,3 +6,4 @@
 # Live Cells with less than two live neighbors die to starvation
 # Live cells with more than three live neighbors die to overpopulation
 # Dead cells with exactly three live neighbors come to life
+# Select a pattern and hit play to automate or select a preset
